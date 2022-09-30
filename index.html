@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Template</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row h-100">
+            <div class="col-lg-auto col-md-8 canvas-column">
+               <div id="canvas-container">
+                  <span id="score">Score:</span>
+                  <canvas width="500" height="500" id="canvas"></canvas>
+                  <div class="mobile-controls d-none">
+                     <button data-move="ArrowLeft" class="btn btn-secondary"><</button>
+                     <button data-move="ArrowDown" class="btn btn-secondary">∨</button>
+                     <button data-move="ArrowRight" class="btn btn-secondary">></button>
+                     <button data-move="ArrowUp" class="btn btn-secondary">∧</button>
+                  </div>
+               </div>
+            </div>
+            <div class="game-over-mask" id="game-over-mask">
+               <div class="game-over-modal">
+                  <div class="close-btn"></div>
+                  <h2>Game Over</h2>
+                  <button class="btn btn-lg btn-dark">Play Again</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+   background: #263445;
+}
+
+.container {
+   height: 100vh;
+}
+
+.row {
+   justify-content: center;
+   align-items: center;
+}
+
+#score {
+   color: #fff;
+   font-size: 20px;
+}
+div#canvas-container {
+   display: flex;
+   flex-direction: column;
+}
+
+canvas {
+   display: flex;
+   width: 100%;
+   margin: 0.5em 0;
+   border: 1px solid #ffffff80;
+}
+
+.mobile-controls {
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+   margin: auto;
+   flex-wrap: wrap-reverse;
+   max-width: 174px;
+}
+
+.mobile-controls button {
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+.game-over-mask {
+   transition: all ease 0.3s;
+   display: flex;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   z-index: -1;
+}
+
+.game-over-mask.active {
+   opacity: 1;
+   z-index: 1;
+}
+
+.game-over-mask.active .game-over-modal {
+   transform: translateY(0);
+}
+
+.game-over-mask .game-over-modal {
+   transition: transform ease 0.3s;
+   transform: translateY(-340px);
+   margin: auto;
+   background: #fff;
+   padding: 20px;
+   border-radius: 4px;
+}
+
+.game-over-mask .game-over-modal h2 {
+   font-size: 3.9em;
+}
+
+.game-over-mask .game-over-modal button {
+   margin-top: 20px;
+}
